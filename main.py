@@ -16,6 +16,9 @@ def main(page:fl.Page):
             d.content=fl.Text(selected)
             d.open = True
             page.update()
+    page.theme_mode=fl.ThemeMode.LIGHT
+    page.window_width=600
+    page.window_height=300
     d = fl.AlertDialog(title=fl.Text('BACKGROUND SUCCESSFULLY REMOVED FROM:'))
     filepicker=fl.FilePicker(on_result=select)
     page.overlay.append(filepicker)
